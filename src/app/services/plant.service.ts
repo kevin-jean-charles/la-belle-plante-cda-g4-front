@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PlantService {
-  baseUrl: string;
+  baseUrl: string = 'https://la-belle-plante-cda-g4-api.herokuapp.com';
 
   subjectListProduct$ = new Subject<any[]>();
 

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrlApi: 'http://localhost:3000'
+  baseUrlApi: 'https://la-belle-plante-cda-g4-api.herokuapp.com'
 };
 
 /*
