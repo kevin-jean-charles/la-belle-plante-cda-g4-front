@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrlApi: 'https://dev-environment-formation.herokuapp.com:3000'
 };
