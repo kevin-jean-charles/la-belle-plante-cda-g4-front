@@ -1,21 +1,20 @@
-name: CI-CD
+name: Deploy
 on: 
   push:
     branches: [ main ]
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  deploy: 
-    needs: build
+  build: 
     runs-on: ubuntu-latest
-
+    
     steps: 
      - uses: actions/checkout@v2
     
      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
        with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "la-belle-plante-cda-g4" #Must be unique in Heroku
+          heroku_app_name: "la-belle-plante-cda-g4-api" #Must be unique in Heroku
           heroku_email: "kevin.jean-charles@outlook.fr"
+
+
+
